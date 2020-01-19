@@ -80,7 +80,7 @@ func (e *Escpos) reset() {
 }
 
 // create Escpos printer
-func New(dst io.ReadWriter) (e *Escpos) {
+func New(dst io.Writer) (e *Escpos) {
 	e = &Escpos{dst: dst}
 	e.reset()
 	return
